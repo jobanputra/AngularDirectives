@@ -6,10 +6,11 @@
             restrict: "E",
             replace: true,
             scope: {
-                user:"="
+                user: "=person",
+                initialCollapsed:"@collapsed" //passing values to isolated scope
             }, //isolated scope
             controller: function ($scope) {
-                $scope.collapsed = false;
+                $scope.collapsed = ($scope.initialCollapsed === "true");
                 $scope.knightMe = function (user) {
                     user.rank = "Knight";
                 };
