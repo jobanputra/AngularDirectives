@@ -4,7 +4,13 @@
         return {
             templateUrl: "userInfoCard.html",
             restrict: "E",
-            replace:true
+            replace: true,
+            controller: function ($scope) {
+                $scope.knightMe = function (user) {
+                    user.rank = "Knight";
+                };
+
+            }
         };
     };
     

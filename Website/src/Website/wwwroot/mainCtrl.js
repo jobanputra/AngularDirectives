@@ -15,6 +15,7 @@
                 "Chewbacca"
             ]
         };
+
     };
 
     var module = angular.module("angularDirectives");
