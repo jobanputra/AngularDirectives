@@ -2,7 +2,7 @@
 
     var mainCtrl = function ($scope) {
         $scope.message = "Hello from controller";
-        $scope.user = {
+        $scope.user1 = {
             name: "Luke Skywalker",
             address: {
                 street: "PO Box 123",
@@ -12,6 +12,19 @@
             friends: [
                 "Princess Leia",
                 "Hans Solo",
+                "Chewbacca"
+            ]
+        };
+        $scope.user2 = {
+            name: "Hans Solo",
+            address: {
+                street: "PO Box 123",
+                city: "Mos Eisley",
+                planet: "Tattoine"
+            },
+            friends: [
+                "Princess Leia",
+                "Luke Skywalker",
                 "Chewbacca"
             ]
         };
