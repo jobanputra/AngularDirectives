@@ -1,7 +1,10 @@
 ﻿(function () {
 
     var mainCtrl = function ($scope) {
-        $scope.message = "Hello from controller";
+        $scope.handlePause = function () {
+            console.log('video was paused');
+
+        };
     };
 
     var module = angular.module("angularDirectives");
