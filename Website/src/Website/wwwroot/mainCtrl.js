@@ -13,7 +13,8 @@
                 "Princess Leia",
                 "Hans Solo",
                 "Chewbacca"
-            ]
+            ],
+            level:0
         };
         $scope.user2 = {
             name: "Hans Solo",
@@ -26,7 +27,8 @@
                 "Princess Leia",
                 "Luke Skywalker",
                 "Chewbacca"
-            ]
+            ],
+            level:1
         };
 
     };
