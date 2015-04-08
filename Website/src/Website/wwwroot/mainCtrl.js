@@ -1,7 +1,8 @@
 ﻿(function () {
 
     var mainCtrl = function ($scope) {
-        $scope.handlePause = function () {
+        $scope.handlePause = function (e) {
+            console.log(e);
             console.log('video was paused');
 
         };

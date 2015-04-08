@@ -14,7 +14,7 @@
 
 </head>
 <body ng-controller="mainCtrl" class="container" style="padding-top:30px">
-    <video id="vid" spacebar-support event-pause="handlePause()" controls preload="none">
+    <video id="vid" spacebar-support event-pause="handlePause(evt)" controls preload="none">
         <source src="https://bennugd-vlc.googlecode.com/files/sintel_trailer-480p.mp4"
                 type='video/mp4; codecs="avc1, mp4a"'>
         <source src="https://download.blender.org/durian/trailer/sintel_trailer-480p.ogv"

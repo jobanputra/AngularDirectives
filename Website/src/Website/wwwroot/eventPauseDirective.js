@@ -1,15 +1,13 @@
 ﻿(function () {
-    eventPause = function () {
+    eventPause = function ($parse) {
         return {
-            restrict: 'A',
-            scope:{
-                eventPause:'&'
-            },
+            restrict: 'A',            
             link: function (scope, el, attrs) {
+                var fn = $parse(attrs['eventPause']);
                 el.on('pause', function (event) {
                     //start a new digest cycle since an external event (video player paused) has happened
                     scope.$apply(function () {
-                        scope.eventPause();
+                        fn(scope, { evt: event });
                     });
 
 
