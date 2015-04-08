@@ -1,7 +1,12 @@
 ﻿(function () {
 
     var mainCtrl = function ($scope) {
-        $scope.message = "Hello from controller";
+    	$scope.user1 = {
+    		name: "Luke",
+			selected:true
+    	};
+
+		
     };
 
     var module = angular.module("angularDirectives");
