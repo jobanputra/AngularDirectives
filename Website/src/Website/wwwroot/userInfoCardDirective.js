@@ -25,7 +25,7 @@
                 };
                 $scope.nextState = function () {
                     $scope.user.level++;
-                    if ($scope.user.level > 2)
+                    if ($scope.user.level > 3)
                         $scope.user.level = 0;
                 };
             },

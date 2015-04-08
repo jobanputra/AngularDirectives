@@ -4,18 +4,10 @@
         return {
             restrict: "A",
             link: function (scope, el, attrs) {
-                scope.$watch(attrs["stateDisplay"], function(newValue){
-                    switch (newValue) {
-                        case 0:
-                            el.css("background-color", "white");
-                            break;
-                        case 1:
-                            el.css("background-color", "yellow");
-                            break;
-                        case 2:
-                            el.css("background-color", "red");
-                            break;
-                    }
+                var parms = attrs["stateDisplay"].split(" ");
+                var linkVar = parms[0];
+                scope.$watch(linkVar, function(newValue){
+                    el.css("background-color", parms[newValue + 1]);
                 })
             }
         };
