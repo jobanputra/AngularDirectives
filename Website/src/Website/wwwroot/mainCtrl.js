@@ -5,6 +5,7 @@
     		name: "Luke",
 			selected:true
     	};
+    	$scope.size = 150;
 
 		
     };

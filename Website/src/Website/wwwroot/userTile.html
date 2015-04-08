@@ -1,4 +1,7 @@
 ﻿<div class="well" user-click-select ng-class="{hilight:user.selected}" >
-	<h1>{{user.name}}</h1>
-	{{user.selected}}
+    <div>This is the name when it is unsclaed {{user.name}}</div>
+    <div font-scale="size">This is the name when it is scaled: {{user.name}}</div>
+    <input type="text" ng-model="size" />
+    {{size}}
+
 </div>
