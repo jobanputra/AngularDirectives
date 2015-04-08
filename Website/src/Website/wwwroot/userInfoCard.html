@@ -1,8 +1,10 @@
 ﻿<div class="panel panel-primary">
     <div class="panel-heading" ng-click="collapse()">
-        {{user.name}}
+        <span state-display="user.level user-ok user-warning user-problem user-error">
+            {{user.name}}
+        </span>
     </div>
-    <div class="panel-body" ng-hide="collapsed" state-display="user.level white yellow orange red">
+    <div class="panel-body" ng-hide="collapsed">
         <address></address>
         <br />
         <div ng-show="!!user.friends">
@@ -10,7 +12,7 @@
             <ul>
                 <li ng-repeat="friend in user.friends">
                     {{friend}}
-                   <remove-friend method="removeFriend(friend)"></remove-friend>
+                    <remove-friend method="removeFriend(friend)"></remove-friend>
                 </li>
             </ul>
         </div>
@@ -18,7 +20,9 @@
             Rank: {{user.rank}}
         </div>
         <button class="btn btn-success" ng-click="knightMe(user)"
-                ng-show="!user.rank">Knight Me</button>
+                ng-show="!user.rank">
+            Knight Me
+        </button>
         <button class="btn btn-info" ng-click="nextState()">Next State</button>
     </div>
 </div>

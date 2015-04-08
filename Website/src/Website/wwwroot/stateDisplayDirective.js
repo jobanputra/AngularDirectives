@@ -6,8 +6,10 @@
             link: function (scope, el, attrs) {
                 var parms = attrs["stateDisplay"].split(" ");
                 var linkVar = parms[0];
-                scope.$watch(linkVar, function(newValue){
-                    el.css("background-color", parms[newValue + 1]);
+                var classes = parms.slice(1);
+                scope.$watch(linkVar, function (newValue) {
+                    el.removeClass(classes.join(" "));
+                    el.addClass(classes[newValue]);
                 })
             }
         };
