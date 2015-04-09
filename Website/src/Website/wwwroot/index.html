@@ -9,17 +9,21 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="mainCtrl.js"></script>
-	<script type="text/javascript" src="displayBoxDirective.js"></script>
+	<script type="text/javascript" src="myQuestionDirective.js"></script>
+
 </head>
-<body ng-controller="mainCtrl">
-	<h1>Hello Transclusion</h1>
-	<display-box>
-		<div>This is content inside</div>
-		<ul>
-			<li>Item 1</li>
-			<li>Item 2</li>
-		</ul>
-		<div>{{message}}</div>
-	</display-box>
+<body ng-controller="mainCtrl" class="container">
+	<h1>Questions</h1>
+	<my-question q="Where is the secret rebel base?">
+		<input type="text" ng-model="answers.baseLocation" />
+	</my-question>
+	<my-question q="Are you my brother">
+		<input type="radio" ng-value="true" ng-model="answers.brother" />Yes
+		<input type="radio" ng-value="true" ng-model="answers.brother" />No
+	</my-question>
+	<my-question q="Are you the driod that I am looking for?">
+		<button class="btn btn-lg btn-primary">No</button>
+		<button class="btn btn-xs btn-default">Yes</button>
+	</my-question>
 </body>
 </html>
