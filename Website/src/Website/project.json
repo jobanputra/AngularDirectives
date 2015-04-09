@@ -10,7 +10,7 @@
         "**.vspscc"
     ],
     "dependencies": {
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta1"
+        "Microsoft.AspNet.Server.IIS": "1.0.0-*"
     },
     "frameworks" : {
         "aspnet50" : { },
